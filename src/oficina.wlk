@@ -1,3 +1,6 @@
+/*
+ * Oficina: Bien
+ */
 import remiseras.*
 import clientes.*
 
@@ -19,10 +22,12 @@ object oficina {
 	}
 	
 	method intercambiarRemiseras() {
-		const aux = primeraRemisera
-		
-		primeraRemisera = segundaRemisera
-		segundaRemisera = aux
+		/*
+		 * Acá te dejo la forma de reutilizar el codigo para hacer el intercambio
+		 * No hace falta utilizar una variable auxiliar
+		 * Recordá que podes llamar a tus metodos con self
+		 */
+		self.asignarRemiseras(segundaRemisera,primeraRemisera )
 	}
 	
 	method remiseraElegidaParaViaje(cliente, kms) {

@@ -1,26 +1,23 @@
+/*
+ * Cliente: Bien 
+ */
 object ludmila {
+	/* Te dejo una forma resumida de escribir este método */
+	method precioKilometro() =  18
 	
-	method precioKilometro() {
-		return 18
-	}
 }
 
 object anaMaria {
 	var economicamenteEstable = true
 	
-	method precioKilometro() {
-		if (economicamenteEstable) {
-			return 30
-		} else {
-			return 25
-		}
-	}
+	method precioKilometro() =  if (economicamenteEstable) { 30} else {25}
 	
 	method economicamenteEstable() {
 		return economicamenteEstable
 	}
 	
 	method cambiarEstabilidad() {
+		/*Bien cambiando de true a false y viceversa */
 		economicamenteEstable = not economicamenteEstable
 	}
 }
