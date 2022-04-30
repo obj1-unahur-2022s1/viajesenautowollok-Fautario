@@ -1,3 +1,7 @@
+/*
+ * Remiseras: Bien, podias usar el max()
+ */
+
 import clientes.*
 
 object roxana {
@@ -8,24 +12,16 @@ object roxana {
 }
 
 object gabriela {
-	
-	method precioViaje(cliente, km) {
-		return (cliente.precioKilometro() * km) * 1.2
-	}
+	/* Te dejo la forma resumida  */
+	method precioViaje(cliente, km) =cliente.precioKilometro() * km * 1.2
+
 }
 
 object mariela {
 	
-	method superaElMinimo(cliente, km) {
-		return cliente.precioKilometro() * km > 50
-	}
-	
 	method precioViaje(cliente, km) {
-		if (self.superaElMinimo(cliente, km)) {
-			return cliente.precioKilometro() * km
-		} else {
-			return 50
-		}
+		/* Esto era más fácil si usabas el max() */
+		return 50.max(cliente.precioKilometro() * km)
 	}
 }
 
